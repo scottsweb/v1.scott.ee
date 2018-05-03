@@ -1,0 +1,72 @@
+/* Navigation
+  =============== */
+
+.site-header {
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+}
+
+.site-header-container {
+	background: $alternate-color;
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	top: 0;
+	max-width: inherit;
+	width: 100%;
+	z-index: 10;
+}
+
+.navigation {
+	width: 250px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	overflow: hidden;
+}
+
+.pagination {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	a {
+		display: block;
+		padding: 13px 20px;
+		color: $alternate-color;
+		background: $primary-color;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			background: darken($primary-color, 5%);
+		}
+	}
+}
+
+.pagination-archive {
+	li {
+		width: 50%;
+		height: 100%;
+		float: left;
+
+		&:last-child {
+			a {
+				margin-left: 1px;
+			}
+		}
+	}
+}
+
+.logo {
+	//width: 120px;
+	//height: 120px;
+	background: $alternate-color;
+}

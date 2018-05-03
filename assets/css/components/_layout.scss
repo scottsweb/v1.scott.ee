@@ -1,0 +1,134 @@
+/* Layout
+  =============== */
+
+.content {
+	margin-top: $margins * 6;
+	margin-bottom: $margins * 2;
+
+	@include large-breakpoint {
+		margin-top: $margins * 8;
+	}
+}
+
+.posts {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	.post-title {
+		max-width: 75%;
+		font-size: 2.8rem;
+	}
+
+	.post {
+		padding-bottom: $margins;
+		margin-bottom: $margins;
+		border-bottom: 1px solid $accent-color;
+
+		@include large-breakpoint {
+			padding-bottom: $margins * 2;
+			margin-bottom: $margins * 2;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+			border-bottom: none;
+		}
+
+		span {
+			position: relative;
+			z-index: 1;
+			text-transform: uppercase;
+			font-size: 0.8em;
+			color: darken($accent-color,20%);
+		}
+
+		h3 {
+			margin: 0;
+			position: relative;
+			z-index: 1;
+		}
+
+		a {
+			display: block;
+  			//box-decoration-break: clone;
+			position: relative;
+
+			&:before {
+				background: lighten($accent-color,5%);
+				content: '';
+				position: absolute;
+				height: 60px;
+				width: 0%;
+				top: 15px;
+				left: -5%;
+				z-index: 0;
+				transition: width .2s ease-in-out;
+				//transform: rotate(2deg);
+			}
+
+			&:active {
+				text-decoration: none;
+			}
+
+			&:hover {
+				text-decoration: none;
+
+				&:before {
+					width: 110%;
+				}
+			}
+		}
+	}
+}
+
+.fade-enter-active, .fade-leave-active {
+	transition: all 0.4s;
+}
+
+.fade-enter {
+	opacity: 0;
+	transform: translateY(30px);
+}
+
+.fade-leave-to {
+	opacity: 0;
+	transform: translateY(-30px);
+}
+
+.popin-enter-active, .popin-leave-active {
+	transition: all 0.3s;
+	//transition-delay: 0.2s;
+}
+
+.popin-enter {
+	opacity: 0;
+	transform: translateY(-60px);
+}
+
+.popin-leave-to {
+	opacity: 0;
+	transform: translateY(-30px);
+}
+
+/**.list-enter-active, .list-leave-active {
+  transition: all 5s;
+}
+.list-enter, .list-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}**/
+
+img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+}
+
+.post-title {
+	margin-bottom: $margins * 2;
+
+	@include large-breakpoint {
+		margin-bottom: $margins * 3;
+	}
+}
