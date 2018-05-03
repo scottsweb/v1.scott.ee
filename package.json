@@ -1,0 +1,44 @@
+{
+  "name": "scott.ee",
+  "version": "1.0.0",
+  "description": "Design, Technology, Open Source & Sustainability.",
+  "author": "Scott Evans <git@scott.ee>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt --spa",
+    "build": "nuxt build --spa",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+	"generate-content": "nuxt generate --no-build",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "analyse": "yarn nuxt build --webpackmonitor --analyze",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.1",
+    "@nuxtjs/pwa": "^2.0.8",
+    "@nuxtjs/sitemap": "0.1.1",
+    "@nuxtjs/webpackmonitor": "^0.1.0",
+    "date-fns": "^1.29.0",
+    "install": "^0.10.4",
+    "npm": "^5.8.0",
+    "nuxt": "^1.4.0",
+    "velocity-animate": "^1.5.1",
+    "vue-lazyload": "^1.2.2",
+    "vue-scrollto": "^2.11.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "empty-folder": "^2.0.1",
+    "eslint": "^4.19.1",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.4.0",
+    "less": "^3.0.1",
+    "less-loader": "^4.1.0",
+    "node-persist": "^3.0.0",
+    "node-sass": "^4.8.3",
+    "postcss-loader": "^2.1.3",
+    "sass-loader": "^6.0.7"
+  }
+}
