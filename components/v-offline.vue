@@ -1,13 +1,13 @@
 <template>
 	<div :class="{ onlineClass: isOnline, offlineClass: !isOnline }">
-	<slot
-		v-if="isOnline"
-		name="online"
-	/>
-	<slot
-		v-else
-		name="offline"
-	/>
+		<slot
+			v-if="isOnline"
+			name="online"
+		/>
+		<slot
+			v-else
+			name="offline"
+		/>
 	</div>
 </template>
 
