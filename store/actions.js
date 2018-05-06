@@ -49,17 +49,20 @@ export default {
 				'per_page': state.pagination.postsPerPage,
 				'page': page
 			} } )
-			// update pagination totals in store from API response
-			commit( 'paginateTotals', {
-				totalPosts: parseInt(posts.headers['x-wp-total']),
-				totalPostsPages: parseInt(posts.headers['x-wp-totalpages'])
-			} )
-			// add page to returned data so we can grab posts by page later
-			posts.data.forEach( post => {
-				post.page = page
-			} )
-			// add posts to store
-			commit( 'addPosts', posts.data )
+
+			if ( posts ) {
+				// update pagination totals in store from API response
+				commit( 'paginateTotals', {
+					totalPosts: parseInt( posts.headers['x-wp-total'] ),
+					totalPostsPages: parseInt( posts.headers['x-wp-totalpages'] )
+				} )
+				// add page to returned data so we can grab posts by page later
+				posts.data.forEach( post => {
+					post.page = page
+				} )
+				// add posts to store
+				commit( 'addPosts', posts.data )
+			}
 			// TODO: if a new post comes into the store after a timed update,
 			// we need to re-index all pages as the new post may be on an unknown page
 			// we don't want some pages with totalposts + 1 for example
