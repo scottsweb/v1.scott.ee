@@ -1,7 +1,12 @@
 <template>
 	<header class="site-header medium-container">
 		<transition name="popin" appear>
-			<div class="site-header-container">
+			<div class="site-header-container" v-shortcuts="[
+				{ shortcut: [ 'arrowright' ], callback: goNextPage, once: true },
+				{ shortcut: [ 'arrowleft' ], callback: goPrevPage, once: true },
+				{ shortcut: [ 'esc' ], callback: goBackUp, once: true },
+				{ shortcut: [ 'h' ], callback: goBackUp, once: true },
+			]">
 				<nuxt-link to="/">
 					<Logo/>
 					<h1 class="title screen-reader-text" v-if="this.$route.path === '/'">Scott Evans</h1>
@@ -74,5 +79,20 @@ export default {
 			return this.$store.state.pagination.current < this.$store.state.pagination.totalPostsPages
 		},
 	},
+	methods: {
+		goNextPage() {
+			if ( this.notLastPage ) {
+				this.$router.push( this.nextPage )
+			}
+		},
+		goPrevPage() {
+			if ( this.notFirstPage ) {
+				this.$router.push( this.prevPage )
+			}
+		},
+		goBackUp() {
+			this.$router.push( this.backUp )
+		}
+	}
 }
 </script>
