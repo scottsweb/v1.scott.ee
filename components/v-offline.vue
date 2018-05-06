@@ -1,5 +1,6 @@
 <template>
-	<div :class="{ onlineClass: isOnline, offlineClass: !isOnline }">
+	<div :class="wrapperClass()">
+		<transition name="fade">
 		<slot
 			v-if="isOnline"
 			name="online"
@@ -8,6 +9,7 @@
 			v-else
 			name="offline"
 		/>
+		</transition>
 	</div>
 </template>
 
@@ -38,6 +40,12 @@ export default {
 		updateOnlineStatus() {
 			this.isOnline = navigator.onLine || false
 			this.$emit( 'detected-condition', this.isOnline )
+		},
+		wrapperClass(){
+			return {
+				[ this.onlineClass ]: this.isOnline,
+				[ this.offlineClass ]: ! this.isOnline
+			}
 		}
 	}
 }

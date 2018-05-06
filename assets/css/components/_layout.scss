@@ -132,3 +132,12 @@ img {
 		margin-bottom: $margins * 3;
 	}
 }
+
+// notification
+
+.notification div {
+	position: fixed;
+	bottom: $margins;
+	right: $margins;
+	background: red;
+}

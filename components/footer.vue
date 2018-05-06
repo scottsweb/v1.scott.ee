@@ -1,18 +1,29 @@
 <template>
 	<!-- TODO: Add about panel / overlay (possibly served from API) -->
 	<!-- TODO: Add page render time -->
-	<ul class="">
-		<li><a href="https://profiles.wordpress.org/scottsweb">WP</a></li>
-		<li><a href="https://twitter.com/scottsweb">Twitter</a></li>
-		<li><a href="https://github.com/scottsweb">GitHub</a></li>
-		<li><a href="https://scott.ee/feed/">RSS</a></li>
-		<li><!--Inital load in {{ generated }} seconds--></li>
-	</ul>
+	<div>
+		<ul class="">
+			<li><a href="https://profiles.wordpress.org/scottsweb">WP</a></li>
+			<li><a href="https://twitter.com/scottsweb">Twitter</a></li>
+			<li><a href="https://github.com/scottsweb">GitHub</a></li>
+			<li><a href="https://scott.ee/feed/">RSS</a></li>
+			<li><!--Inital load in {{ generated }} seconds--></li>
+		</ul>
+		<v-offline onlineClass="notification notification-online" offlineClass="notification notification-offline">
+			<div slot="offline">
+				<span>Offline.</span>
+			</div>
+		</v-offline>
+	</div>
 </template>
 
 <script>
+import vOffline from '~/components/v-offline.vue'
 
 export default {
+	components: {
+		vOffline
+	},
 	computed: {
 		generated() {
 			const t = window.performance && performance.timing;
@@ -23,5 +34,4 @@ export default {
 		}
 	}
 }
-
 </script>
