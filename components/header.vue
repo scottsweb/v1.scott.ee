@@ -5,7 +5,7 @@
 				{ shortcut: [ 'arrowright' ], callback: goNextPage, once: true },
 				{ shortcut: [ 'arrowleft' ], callback: goPrevPage, once: true },
 				{ shortcut: [ 'esc' ], callback: goBackUp, once: true },
-				{ shortcut: [ 'h' ], callback: goBackUp, once: true },
+				{ shortcut: [ 'h' ], callback: goHome, once: true },
 			]">
 				<nuxt-link to="/">
 					<Logo/>
@@ -92,6 +92,9 @@ export default {
 		},
 		goBackUp() {
 			this.$router.push( this.backUp )
+		},
+		goHome() {
+			this.$router.push( '/' )
 		}
 	}
 }
