@@ -6,10 +6,11 @@
   "private": true,
   "scripts": {
     "dev": "nuxt --spa",
-    "build": "nuxt build --spa",
-    "start": "nuxt start",
+	"start": "nuxt start",
+    "spa": "nuxt build --spa",
+	"spa-no-generate": "nuxt build --spa --no-generate",
     "generate": "nuxt generate",
-	"generate-content": "nuxt generate --no-build",
+    "generate-content": "nuxt generate --no-build",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "analyse": "yarn nuxt build --webpackmonitor --analyze",
     "precommit": "npm run lint"
