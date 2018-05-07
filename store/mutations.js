@@ -9,10 +9,7 @@ export default {
 	// add one or many posts to the posts state
 	addPosts(state, posts) {
 		for (let post of posts) {
-			// check the store for existing post before adding
-			if (undefined === this.getters.getPostBySlug(post.slug)) {
-				state.posts.push(post)
-			}
+			state.posts.push(post)
 		}
 		// TODO: do we need to sort by date (the API does that) - better to do this on get not set
 		//state.posts.sort((a,b) => a.date_gmt < b.date_gmt)
