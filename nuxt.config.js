@@ -121,7 +121,7 @@ module.exports = {
 	* Plugins
 	*/
 	plugins: [
-		{ src: '~plugins/vue-lazyload', ssr: false },
+		{ src: '~plugins/lazyload', ssr: false },
 		// { src: '~plugins/vue-scrollto', ssr: false },
 		{ src: '~/plugins/velocity', ssr: false },
 		{ src: '~/plugins/axios' },
