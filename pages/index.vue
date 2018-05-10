@@ -57,7 +57,7 @@ export default {
 	},
 	mounted() {
 		// prefetch pages either side of this one
-		const nextPage =  parseInt( this.$route.params.id ) + 1 || 2;
+		const nextPage = parseInt( this.$route.params.id ) + 1 || 2;
 		this.$store.dispatch( 'getPosts', { page: nextPage, prefetch: true } );
 
 		const previousPage = ( this.$route.params.id ) ? parseInt( this.$route.params.id - 1 ) : false;
@@ -68,6 +68,9 @@ export default {
 	head() {
 		return {
 			title: 'Journal • Page ' + ( this.$route.params.id || 1 ),
+			bodyAttrs: {
+				class: this.$route.params.id ? 'archive page page-' + this.$route.params.id : 'home archive'
+			},
 			meta: [
 				{
 					hid: 'og:title',
@@ -83,10 +86,10 @@ export default {
 		}
 	},
 	methods: {
-		beforeEnter: function (el) {
+		beforeEnter: function(el) {
 			el.style.opacity = 0
 		},
-		enter: function (el, done) {
+		enter: function(el, done) {
 			var delay = el.dataset.index * 150
 			setTimeout(() => {
 				this.$velocity(
@@ -96,7 +99,7 @@ export default {
 				)
 			}, delay)
 		},
-		leave: function (el, done) {
+		leave: function(el, done) {
 			var delay = el.dataset.index * 150
 			setTimeout(() => {
 				this.$velocity(

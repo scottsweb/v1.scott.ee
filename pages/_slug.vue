@@ -38,6 +38,9 @@ export default {
 	head() {
 		return {
 			title: this.post.title.rendered,
+			bodyAttrs: {
+				class: 'page single page-id-' + this.post.id
+			},
 			meta: [
 				{
 					hid: 'description',

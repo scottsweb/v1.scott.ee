@@ -44,6 +44,9 @@ export default {
 	head() {
 		return {
 			title: this.post.title.rendered,
+			bodyAttrs: {
+				class: 'single post post-id-' + this.post.id
+			},
 			meta: [
 				{
 					hid: 'description',
