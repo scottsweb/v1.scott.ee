@@ -3,18 +3,23 @@
 
 .content {
 	margin-top: $margins * 6;
-	margin-bottom: $margins * 2;
+	margin-bottom: $margins * 4;
 
 	@include large-breakpoint {
-		margin-top: $margins * 8;
+		margin-bottom: $margins * 6;
 	}
 }
 
 .posts {
 
-	.post-title {
+	.section-title {
 		max-width: 75%;
 		font-size: 2.8rem;
+		margin-bottom: $margins * 2;
+
+		@include large-breakpoint {
+			margin-bottom: $margins * 4;
+		}
 	}
 
 	.post {
@@ -32,7 +37,7 @@
 			border-bottom: none;
 		}
 
-		time {
+		.entry-date {
 			position: relative;
 			z-index: 1;
 			text-transform: uppercase;
@@ -40,7 +45,7 @@
 			color: darken($accent-color,20%);
 		}
 
-		h3 {
+		.entry-title {
 			margin: 0;
 			position: relative;
 			z-index: 1;
@@ -83,6 +88,28 @@
 			}
 		}
 	}
+}
+
+.single .page,
+.single .post {
+
+	.entry-title {
+		margin-top: 0;
+		margin-bottom: $margins * 2;
+
+		@include large-breakpoint {
+			margin-bottom: $margins * 3;
+		}
+	}
+
+	.entry-date {
+		position: relative;
+		z-index: 1;
+		text-transform: uppercase;
+		font-size: 0.8em;
+		color: darken($accent-color,20%);
+	}
+
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -128,19 +155,20 @@ img {
 	height: auto;
 }
 
-.post-title {
-	margin-bottom: $margins * 2;
-
-	@include large-breakpoint {
-		margin-bottom: $margins * 3;
-	}
-}
-
 // notification
 
 .notification div {
 	position: fixed;
 	bottom: $margins;
 	right: $margins;
-	background: red;
+	background: $primary-color;
+	padding: 5px 10px;
+	font-size: 0.8em;
+	font-weight: bold;
+	color: $background;
+
+	@include large-breakpoint {
+		bottom: $margins * 2;
+		right: $margins * 2;
+	}
 }

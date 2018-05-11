@@ -1,7 +1,7 @@
 <template>
 	<section class="posts">
 		<header>
-			<h2 class="post-title" v-show="this.$route.path === '/'">Design, Technology, Open Source &amp; Sustainability.</h2>
+			<h2 class="section-title" v-show="this.$route.path === '/'">Design, Technology, Open Source &amp; Sustainability.</h2>
 		</header>
 		<transition-group
 			name="list"

@@ -16,6 +16,23 @@
 	max-width: inherit;
 	width: 100%;
 	z-index: 10;
+
+	@include large-breakpoint {
+		width: 150px;
+		height: 205px;
+		top: $margins * 2;
+		right: $margins * 2;
+	}
+}
+
+.logo {
+	//width: 120px;
+	//height: 120px;
+	background: $alternate-color;
+
+	@include large-breakpoint {
+		height: 150px;
+	}
 }
 
 .navigation {
@@ -25,6 +42,13 @@
 	top: 0;
 	height: 100%;
 	overflow: hidden;
+
+	@include large-breakpoint {
+		width: 150px;
+		height: 55px;
+		bottom: 0;
+		top: auto;
+	}
 }
 
 .pagination {
@@ -63,10 +87,4 @@
 			}
 		}
 	}
-}
-
-.logo {
-	//width: 120px;
-	//height: 120px;
-	background: $alternate-color;
 }
