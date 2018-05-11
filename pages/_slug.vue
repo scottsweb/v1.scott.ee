@@ -1,5 +1,5 @@
 <template>
-	<article class="page hentry">
+	<article class="page hentry" :id="'page-id-' + this.post.id">
 		<header class="entry-header">
 			<h1 v-html="post.title.rendered" class="entry-title"></h1>
 		</header>

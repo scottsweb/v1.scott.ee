@@ -1,5 +1,5 @@
 <template>
-	<article class="post hentry">
+	<article class="post hentry" :id="'post-id-' + this.post.id">
 		<header class="entry-header">
 			<time class="entry-date published" datetime="post.date">{{ longTimestamp( post.date ) }}</time>
 			<h1 v-html="post.title.rendered" class="entry-title"></h1>
