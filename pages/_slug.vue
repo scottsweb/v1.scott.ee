@@ -1,17 +1,19 @@
 <template>
-	<section class="container">
-		<div>
-			<h1 v-html="post.title.rendered" class="post-title"></h1>
+	<article class="page hentry">
+		<header class="entry-header">
+			<h1 v-html="post.title.rendered" class="entry-title"></h1>
+		</header>
+		<div v-lazy-container="{ selector: 'img' }" class="entry-content">
 			<div v-html="post.content.rendered"></div>
 		</div>
-	</section>
+	</article>
 </template>
 
 <script>
 export default {
 	components: {
 	},
-	async asyncData({ payload, isStatic, store, params }) {
+	async asyncData( { payload, isStatic, store, params } ) {
 		// payload set during static generation
 		if ( payload && isStatic ) {
 			store.commit( 'addPage', payload )

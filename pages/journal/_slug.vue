@@ -1,13 +1,13 @@
 <template>
-	<section class="post">
-		<div>
-			<span>{{ longTimestamp( post.date ) }}</span>
-			<h1 v-html="post.title.rendered" class="post-title"></h1>
-			<div v-lazy-container="{ selector: 'img' }">
-				<div v-html="post.content.rendered"></div>
-			</div>
+	<article class="post hentry">
+		<header class="entry-header">
+			<time class="entry-date published" datetime="post.date">{{ longTimestamp( post.date ) }}</time>
+			<h1 v-html="post.title.rendered" class="entry-title"></h1>
+		</header>
+		<div v-lazy-container="{ selector: 'img' }" class="entry-content">
+			<div v-html="post.content.rendered"></div>
 		</div>
-	</section>
+	</article>
 </template>
 
 <script>
@@ -17,7 +17,7 @@ export default {
 	mixins: {
 		longTimestamp: Function
 	},
-	async asyncData({ payload, isStatic, store, params }) {
+	async asyncData( { payload, isStatic, store, params } ) {
 		// payload set during static generation
 		if ( payload && isStatic ) {
 			store.commit('addPosts', [ payload ])
