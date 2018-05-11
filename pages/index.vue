@@ -5,21 +5,22 @@
 		</header>
 		<transition-group
 			name="list"
-			tag="ul"
+			tag="div"
 			v-if="posts && posts.length"
-			class="posts"
 			v-bind:css="false"
 			v-on:before-enter="beforeEnter"
 			v-on:enter="enter"
 			v-on:leave="leave"
 			appear
 		>
-			<li v-for="(post, index) in posts" v-bind:key="post.id" v-bind:data-index="index" class="post">
-				<nuxt-link :to="'/journal/' + post.slug + '/'">
-					<span>{{ longTimestamp( post.date ) }}</span>
-					<h3 v-html="post.title.rendered"></h3>
-				</nuxt-link>
-			</li>
+			<article v-for="(post, index) in posts" v-bind:key="post.id" v-bind:data-index="index" class="post hentry">
+				<header class="entry-header">
+					<nuxt-link :to="'/journal/' + post.slug + '/'">
+						<time class="entry-date published" datetime="post.date">{{ longTimestamp( post.date ) }}</time>
+						<h3 v-html="post.title.rendered" class="entry-title"></h3>
+					</nuxt-link>
+				</header>
+			</article>
 		</transition-group>
 	</section>
 </template>
@@ -86,28 +87,28 @@ export default {
 		}
 	},
 	methods: {
-		beforeEnter: function(el) {
+		beforeEnter: function( el ) {
 			el.style.opacity = 0
 		},
-		enter: function(el, done) {
+		enter: function( el, done ) {
 			var delay = el.dataset.index * 150
-			setTimeout(() => {
+			setTimeout( () => {
 				this.$velocity(
 					el,
 					{ opacity: 1 },
 					{ complete: done }
 				)
-			}, delay)
+			}, delay )
 		},
-		leave: function(el, done) {
+		leave: function( el, done ) {
 			var delay = el.dataset.index * 150
-			setTimeout(() => {
+			setTimeout( () => {
 				this.$velocity(
 					el,
 					{ opacity: 0 },
 					{ complete: done }
 				)
-			}, delay)
+			}, delay )
 		}
 	},
 }

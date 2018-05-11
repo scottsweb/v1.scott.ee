@@ -1,11 +1,11 @@
 <template>
 	<div class="app">
 		<Header/>
-			<main role="main" class="content small-container">
-				<transition name="fade" appear>
-					<nuxt/>
-				</transition>
-			</main>
+		<main role="main" class="content small-container">
+			<transition name="fade" appear>
+				<nuxt/>
+			</transition>
+		</main>
 		<Footer/>
 	</div>
 </template>
