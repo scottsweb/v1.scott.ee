@@ -1,14 +1,14 @@
 <template>
 	<div :class="wrapperClass()">
 		<transition name="fade">
-		<slot
-			v-if="isOnline"
-			name="online"
-		/>
-		<slot
-			v-else
-			name="offline"
-		/>
+			<slot
+				v-if="isOnline"
+				name="online"
+			/>
+			<slot
+				v-else
+				name="offline"
+			/>
 		</transition>
 	</div>
 </template>
@@ -31,10 +31,10 @@ export default {
 		isOnline: navigator.onLine || false,
 	} ),
 	mounted() {
-		EVENTS.forEach( event => window.addEventListener( event, this.updateOnlineStatus ))
+		EVENTS.forEach( event => window.addEventListener( event, this.updateOnlineStatus ) )
 	},
 	beforeDestroy() {
-		EVENTS.forEach( event => window.removeEventListener( event, this.updateOnlineStatus ))
+		EVENTS.forEach( event => window.removeEventListener( event, this.updateOnlineStatus ) )
 	},
 	methods: {
 		updateOnlineStatus() {
