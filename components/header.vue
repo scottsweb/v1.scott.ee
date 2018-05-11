@@ -81,12 +81,12 @@ export default {
 	},
 	methods: {
 		goNextPage() {
-			if ( this.notLastPage ) {
+			if ( this.notLastPage && this.postArchive ) {
 				this.$router.push( this.nextPage )
 			}
 		},
 		goPrevPage() {
-			if ( this.notFirstPage ) {
+			if ( this.notFirstPage && this.postArchive ) {
 				this.$router.push( this.prevPage )
 			}
 		},
