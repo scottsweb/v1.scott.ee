@@ -37,7 +37,7 @@ export default {
 				return featuredImage[0].media_details.sizes.large.source_url ||
 				featuredImage[0].media_details.sizes.full.source_url
 			} else {
-				return false // TODO: default image
+				return '/og-card.png'
 			}
 		},
 	},

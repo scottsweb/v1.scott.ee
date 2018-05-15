@@ -16,7 +16,7 @@ module.exports = {
 			{ hid: 'description', name: 'description', content: 'Design, Technology, Open Source & Sustainability.' },
 			{ hid: 'og:title', property: 'og:title', content: 'Scott Evans' },
 			{ hid: 'og:description', property: 'og:description', content: 'Design, Technology, Open Source & Sustainability.' },
-			{ hid: 'og:image', property: 'og:image', content: 'https://user-images.githubusercontent.com/904724/26879447-689b56a8-4b91-11e7-968f-5eea1d6c71b4.png' },
+			{ hid: 'og:image', property: 'og:image', content: '/og-card.png' },
 			{ property: 'twitter:card', content: 'summary_large_image' },
 			{ property: 'twitter:site', content: '@scottsweb' },
 			{ property: 'twitter:creator', content: '@scottsweb' },
