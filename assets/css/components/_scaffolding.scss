@@ -260,3 +260,15 @@ dd {
 		padding: $content-padding;
 	}
 }
+
+// Text selection
+
+::-moz-selection { /* Code for Firefox */
+    color: #fff;
+    background: $primary-color;
+}
+
+::selection {
+    color: #fff;
+    background: $primary-color;
+}
