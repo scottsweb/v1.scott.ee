@@ -19,7 +19,7 @@
 							<li v-if="notFirstPage">
 								<nuxt-link :to="prevPage">
 									<span class="screen-reader-text">Older posts</span>
-									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="rightTitle">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="rightTitle" role="img">
 										<title id="rightTitle">Right arrow icon</title>
 										<path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
 									</svg>
@@ -29,7 +29,7 @@
 							<li v-if="notLastPage">
 								<nuxt-link :to="nextPage">
 									<span class="screen-reader-text">Newer posts</span>
-									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="leftTitle">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="leftTitle" role="img">
 										<title id="leftTitle">Left arrow icon</title>
 										<path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
 									</svg>
@@ -40,7 +40,7 @@
 						<ul class="pagination pagination-single" v-else key="single">
 							<nuxt-link :to="backUp">
 								<span class="screen-reader-text">{{ backUpText }}</span>
-								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="backTitle">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="backTitle" role="img">
 									<title id="backTitle">Menu icon</title>
 									<path d="M5,13L9,17L7.6,18.42L1.18,12L7.6,5.58L9,7L5,11H21V13H5M21,6V8H11V6H21M21,16V18H11V16H21Z" />
 								</svg>
