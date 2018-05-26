@@ -76,7 +76,7 @@ $content-padding-mobile: 30px 0;
 $border-width: 1px;
 $border-style: solid;
 $border-color: #dedede;
-$border-radius: 4px;
+$border-radius: 0;
 $borders: $border-width $border-style $border-color;
 
 /* Buttons */
@@ -129,5 +129,5 @@ $caption: #ababab;
 $code-color: $font-color;
 $code-size: 14px;
 $code-family: Menlo, monospace;
-$code-background: transparent;
+$code-background: $alternate-background;
 $code-borders: $borders;

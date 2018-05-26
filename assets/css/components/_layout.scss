@@ -14,11 +14,16 @@
 
 	.section-title {
 		max-width: 75%;
-		font-size: 2.8rem;
+		font-size: 1.8rem;
 		margin-bottom: $margins * 2;
+
+		@include small-breakpoint {
+			font-size: 2.4em;
+		}
 
 		@include large-breakpoint {
 			margin-bottom: $margins * 4;
+			font-size: 2.8rem;
 		}
 	}
 
@@ -42,7 +47,7 @@
 			z-index: 1;
 			text-transform: uppercase;
 			font-size: 0.8em;
-			color: darken($accent-color,20%);
+			color: darken($accent-color,30%);
 		}
 
 		.entry-title {
@@ -107,7 +112,7 @@
 		z-index: 1;
 		text-transform: uppercase;
 		font-size: 0.8em;
-		color: darken($accent-color,20%);
+		color: darken($accent-color,30%);
 	}
 
 }
@@ -153,6 +158,17 @@ img {
 	width: auto;
 	max-width: 100%;
 	height: auto;
+}
+
+.wp-caption {
+	max-width: 100%;
+}
+
+.wp-caption-text {
+	font-size: 0.8em;
+	text-align: center;
+	color: darken($accent-color,30%);
+	padding-top: $margins / 2;
 }
 
 // notification
