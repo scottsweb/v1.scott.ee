@@ -1,7 +1,7 @@
 <template>
 	<section class="posts">
 		<header>
-			<h2 class="section-title" v-show="this.$route.path === '/'">Design, Technology, Open Source &amp; Sustainability.</h2>
+			<h2 class="section-title" v-show="this.$route.path === '/'" v-html="widont( 'Design, Technology, Open Source &amp; Sustainability.' )"></h2>
 		</header>
 		<transition-group
 			name="list"
@@ -17,7 +17,7 @@
 				<header class="entry-header">
 					<nuxt-link :to="'/journal/' + post.slug + '/'">
 						<time class="entry-date published" datetime="post.date">{{ longTimestamp( post.date ) }}</time>
-						<h3 v-html="post.title.rendered" class="entry-title"></h3>
+						<h3 v-html="widont( post.title.rendered )" class="entry-title"></h3>
 					</nuxt-link>
 				</header>
 			</article>
@@ -30,7 +30,8 @@ export default {
 	components: {
 	},
 	mixins: {
-		longTimestamp: Function
+		longTimestamp: Function,
+		widont: Function,
 	},
 	async asyncData({ payload, isStatic, store, params }) {
 		// payload set during static generation

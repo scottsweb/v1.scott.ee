@@ -1,7 +1,7 @@
 <template>
 	<article class="page hentry" :id="'page-id-' + this.post.id">
 		<header class="entry-header">
-			<h1 v-html="post.title.rendered" class="entry-title"></h1>
+			<h1 v-html="widont( post.title.rendered )" class="entry-title"></h1>
 		</header>
 		<div v-lazy-container="{ selector: 'img' }" class="entry-content">
 			<div v-html="post.content.rendered"></div>
@@ -12,6 +12,9 @@
 <script>
 export default {
 	components: {
+	},
+	mixins: {
+		widont: Function,
 	},
 	async asyncData( { payload, isStatic, store, params } ) {
 		// payload set during static generation

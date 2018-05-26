@@ -2,7 +2,7 @@
 	<article class="post hentry" :id="'post-id-' + this.post.id">
 		<header class="entry-header">
 			<time class="entry-date published" datetime="post.date">{{ longTimestamp( post.date ) }}</time>
-			<h1 v-html="post.title.rendered" class="entry-title"></h1>
+			<h1 v-html="widont( post.title.rendered )" class="entry-title"></h1>
 		</header>
 		<div v-lazy-container="{ selector: 'img' }" class="entry-content">
 			<div v-html="post.content.rendered"></div>
@@ -15,7 +15,8 @@ export default {
 	components: {
 	},
 	mixins: {
-		longTimestamp: Function
+		longTimestamp: Function,
+		widont: Function,
 	},
 	async asyncData( { payload, isStatic, store, params } ) {
 		// payload set during static generation

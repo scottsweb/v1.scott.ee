@@ -5,11 +5,19 @@ Vue.mixin( {
 	methods: {
 		/**
 		 * Returns date formatted like 'May 16, 2018'
-		 * @param {String} date
-		 * @return {String} formatted date
+		 * @param {string} date
+		 * @return {string} formatted date
 		 */
 		longTimestamp( date ) {
 			return format( date, 'MMMM Do, YYYY' )
+		},
+		/**
+		 * No widows
+		 * @param  {string} string
+		 * @return {string}
+		 */
+		widont( string ) {
+			return string.replace( / ([^ ]*)$/, '&nbsp;$1' )
 		}
 	}
 } )
