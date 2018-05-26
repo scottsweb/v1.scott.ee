@@ -16,8 +16,9 @@
 	max-width: inherit;
 	width: 100%;
 	z-index: 10;
+	height: 55px;
 
-	@include large-breakpoint {
+	@include xlarge-breakpoint {
 		width: 150px;
 		height: 205px;
 		top: $margins * 2;
@@ -26,25 +27,43 @@
 }
 
 .logo {
-	//width: 120px;
-	//height: 120px;
 	background: $alternate-color;
 
-	@include large-breakpoint {
+	svg {
+		fill: #fff;
+		display: block;
+		height: 30px;
+		width: 100px;
+		margin: 13px 15px;
+	}
+
+	&:hover {
+		svg {
+			fill: $primary-color;
+		}
+	}
+
+	@include xlarge-breakpoint {
 		height: 150px;
+
+		svg {
+			width: 100px;
+			height: inherit;
+			margin: 0 auto;
+		}
 	}
 }
 
 .navigation {
-	width: 250px;
+	width: 150px;
+	height: 55px;
 	position: absolute;
 	right: 0;
 	top: 0;
 	height: 100%;
 	overflow: hidden;
 
-	@include large-breakpoint {
-		width: 150px;
+	@include xlarge-breakpoint {
 		height: 55px;
 		bottom: 0;
 		top: auto;
@@ -63,14 +82,27 @@
 
 	a {
 		display: block;
-		padding: 13px 20px;
+		padding: 17px 24px 6px 24px;
 		color: $alternate-color;
 		background: $primary-color;
 		text-decoration: none;
+		text-align: center;
+
+		@include xlarge-breakpoint {
+			padding: 16px 24px 5px 24px;
+		}
+
+		svg {
+			fill: $alternate-color;
+		}
 
 		&:hover,
 		&:focus {
 			background: darken($primary-color, 5%);
+
+			svg {
+				fill: #fff;
+			}
 		}
 	}
 }
