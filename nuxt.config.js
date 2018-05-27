@@ -22,6 +22,9 @@ module.exports = {
 			{ property: 'twitter:creator', content: '@scottsweb' },
 		],
 		link: [
+			{ rel: 'dns-prefetch', href: '//i0.wp.com' },
+			{ rel: 'dns-prefetch', href: '//i1.wp.com' },
+			{ rel: 'dns-prefetch', href: '//i2.wp.com' },
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 			{ rel: 'alternate',  type: 'application/rss+xml', title: 'RSS Feed | Scott Evans', href: 'https://api.scott.ee/feed/' }
 		]
