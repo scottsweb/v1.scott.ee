@@ -133,7 +133,6 @@
 .lazy {
 	margin: 0;
 	padding: 0;
-	min-height: 150px;
 	//background: $accent-color;
 
 	img {
@@ -207,7 +206,7 @@
 		color: #fff;
 		padding: 5px 0;
 		font-size: 14px;
-		bottom: 30%;
+		bottom: 40%;
 		margin-left: -75px;
 		z-index: 1;
 		content: attr(data-tooltip);
@@ -215,7 +214,7 @@
 	}
 
 	&:after {
-		bottom: 10%;
+		bottom: 20%;
 		margin-left: -5px;
 		width: 0;
 		border-top: 5px solid $alternate-color;

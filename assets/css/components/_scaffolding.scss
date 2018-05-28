@@ -156,6 +156,7 @@ blockquote {
 	border-left: $bq-border;
 	padding: 0 1.5rem;
 	font-style: italic;
+	color: darken($accent-color,40%);
 
 	cite {
 		display: block;

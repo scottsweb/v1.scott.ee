@@ -108,7 +108,7 @@
 		z-index: 1;
 		text-transform: uppercase;
 		font-size: 0.8em;
-		color: darken($accent-color,30%);
+		color: darken($accent-color,40%);
 	}
 
 }
@@ -163,7 +163,7 @@ img {
 .wp-caption-text {
 	font-size: 0.8em;
 	text-align: center;
-	color: darken($accent-color,30%);
+	color: darken($accent-color,40%);
 	padding-top: $margins / 2;
 }
 

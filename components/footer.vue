@@ -1,7 +1,7 @@
 <template>
 	<!-- TODO: Add about panel / overlay (possibly served from API) -->
 	<!-- TODO: Add page render time -->
-	<div class="footer">
+	<div class="footer" role="contentinfo">
 		<ul class="" style="display:none;">
 			<li><a href="https://profiles.wordpress.org/scottsweb">WP</a></li>
 			<li><a href="https://twitter.com/scottsweb">Twitter</a></li>

@@ -1,5 +1,5 @@
 <template>
-	<header class="site-header medium-container">
+	<header class="site-header medium-container" role="banner">
 		<transition name="popin" appear>
 			<div class="site-header-container" v-shortcuts="[
 				{ shortcut: [ 'arrowright' ], callback: goNextPage, once: true },
@@ -13,7 +13,7 @@
 					<span class="title screen-reader-text" v-else>Scott Evans</span>
 				</nuxt-link>
 
-				<nav class="navigation">
+				<nav class="navigation" role="navigation">
 					<transition name="fade" mode="out-in">
 						<ul class="pagination pagination-archive" v-if="postArchive" key="archive">
 							<li v-if="notFirstPage">
@@ -38,13 +38,15 @@
 							<li v-else>&nbsp;</li>
 						</ul>
 						<ul class="pagination pagination-single" v-else key="single">
-							<nuxt-link :to="backUp">
-								<span class="screen-reader-text">{{ backUpText }}</span>
-								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="backTitle" role="img">
-									<title id="backTitle">Menu icon</title>
-									<path d="M5,13L9,17L7.6,18.42L1.18,12L7.6,5.58L9,7L5,11H21V13H5M21,6V8H11V6H21M21,16V18H11V16H21Z" />
-								</svg>
-							</nuxt-link>
+							<li>
+								<nuxt-link :to="backUp">
+									<span class="screen-reader-text">{{ backUpText }}</span>
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="backTitle" role="img">
+										<title id="backTitle">Menu icon</title>
+										<path d="M5,13L9,17L7.6,18.42L1.18,12L7.6,5.58L9,7L5,11H21V13H5M21,6V8H11V6H21M21,16V18H11V16H21Z" />
+									</svg>
+								</nuxt-link>
+							</li>
 						</ul>
 					</transition>
 				</nav>
