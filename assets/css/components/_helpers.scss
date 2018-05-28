@@ -186,3 +186,50 @@
 .o-container:after {
 	clear: both;
 }
+
+// tooltips
+.tooltip {
+	position: relative;
+
+	&:before,
+	&:after {
+		transition: all 0.3s;
+		visibility: hidden;
+		opacity: 0;
+		pointer-events: none;
+		position: absolute;
+		left: 50%;
+	}
+
+	&:before {
+		width: 150px;
+		background-color: $alternate-color;
+		color: #fff;
+		padding: 5px 0;
+		font-size: 14px;
+		bottom: 30%;
+		margin-left: -75px;
+		z-index: 1;
+		content: attr(data-tooltip);
+		text-align: center;
+	}
+
+	&:after {
+		bottom: 10%;
+		margin-left: -5px;
+		width: 0;
+		border-top: 5px solid $alternate-color;
+		border-right: 5px solid transparent;
+		border-left: 5px solid transparent;
+		content: " ";
+		font-size: 0;
+		line-height: 0;
+	}
+
+	&:hover:after,
+	&:hover:before {
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(-30px);
+	}
+}
