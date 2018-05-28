@@ -11,7 +11,7 @@ Vue.use( VueLazyload, {
 			// use a low res image for the loader
 			if ( isCDN.test( listener.src ) ) {
 				listener.el.setAttribute( 'lazy-progressive', 'true' )
-				listener.loading = listener.src.replace( regexTypeOne, '' ) + '&w=90'
+				listener.loading = listener.src.replace( regexTypeOne, '' ) + '&w=90&strip=info'
 			}
 			// respect data save header and improve low bandwidth performance
 			if ( 'connection' in navigator && isCDN.test( listener.src ) ) {
@@ -26,11 +26,11 @@ Vue.use( VueLazyload, {
 					const dataSrcset = listener.el.getAttribute( 'data-srcset' )
 
 					const newDataSrc = dataSrc.replace( regexSize, ( match, $1, $2 ) => {
-						return match.replace( 'resize', 'w' ).replace( $2, ( $2 / 4 ) * window.devicePixelRatio )
+						return match.replace( 'resize', 'w' ).replace( $2, ( $2 / 4 ) * window.devicePixelRatio ) + '&strip=info&quality=50'
 					} );
 
 					const newDataSrcset = dataSrcset.replace( regexSize, ( match, $1, $2 ) => {
-						return match.replace( $2, ( $2 / 4 ) * window.devicePixelRatio )
+						return match.replace( $2, ( $2 / 4 ) * window.devicePixelRatio ) + '&strip=info&quality=50'
 					} );
 
 					listener.src = newDataSrc
