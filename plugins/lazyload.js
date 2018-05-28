@@ -8,10 +8,11 @@ Vue.use( VueLazyload, {
 		progressive( listener, options ) {
 			const isCDN = /wp\.com/
 			const regexTypeOne = /w=(\d)*/gm;
-			// use a low res image for the loader
+			// use a low res image for the loader and strip meta
 			if ( isCDN.test( listener.src ) ) {
 				listener.el.setAttribute( 'lazy-progressive', 'true' )
 				listener.loading = listener.src.replace( regexTypeOne, '' ) + '&w=90&strip=info'
+				listener.src = listener.src + '&strip=info'
 			}
 			// respect data save header and improve low bandwidth performance
 			if ( 'connection' in navigator && isCDN.test( listener.src ) ) {
@@ -26,7 +27,7 @@ Vue.use( VueLazyload, {
 					const dataSrcset = listener.el.getAttribute( 'data-srcset' )
 
 					const newDataSrc = dataSrc.replace( regexSize, ( match, $1, $2 ) => {
-						return match.replace( 'resize', 'w' ).replace( $2, ( $2 / 4 ) * window.devicePixelRatio ) + '&strip=info&quality=50'
+						return match.replace( 'resize', 'w' ).replace( $2, ( $2 / 4 ) * window.devicePixelRatio ) + '&quality=50'
 					} );
 
 					const newDataSrcset = dataSrcset.replace( regexSize, ( match, $1, $2 ) => {
