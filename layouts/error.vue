@@ -1,5 +1,4 @@
 <template>
-	<!-- TODO: Style and add standard header / footer -->
 	<div class="__nuxt-error-page">
 		<div class="error">
 			<div class="title">{{ message }}</div>
@@ -11,19 +10,12 @@
 </template>
 
 <script>
-import Header from '~/components/header.vue'
-import Footer from '~/components/footer.vue'
-
 export default {
 	name: 'nuxt-error',
 	props: ['error'],
 	head() {
 		return {
-			title: this.message,
-	 		meta: [ {
-				name: 'viewport',
-				content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
-			} ]
+			title: this.message
 		}
 	},
 	// Only on debug mode

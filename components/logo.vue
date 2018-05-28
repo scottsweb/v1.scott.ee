@@ -1,5 +1,4 @@
 <template>
-	<!-- TODO: ADD SVG Logo and hide from screen readers -->
 	<div class="logo">
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 319.68871 93.84962" height="93.84962" width="319.68872" aria-labelledby="logoTitle logoDesc" role="img">
 			<title id="logoTitle">Logo</title>

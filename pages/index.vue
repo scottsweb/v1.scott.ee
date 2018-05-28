@@ -36,9 +36,8 @@ export default {
 	async asyncData({ payload, isStatic, store, params }) {
 		// payload set during static generation
 		if ( payload && isStatic ) {
-			// TODO: this can probably all go? as we can use the JSON trick?
 			// setup the store as it would be in SPA mode
-			//const page = parseInt( params.id ) || 1
+			// const page = parseInt( params.id ) || 1
 			const page = payload.meta.page
 			store.commit( 'currentPage', page )
 			store.commit( 'paginate', page )
