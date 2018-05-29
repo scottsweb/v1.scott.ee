@@ -13,14 +13,14 @@
 					<span class="title screen-reader-text" v-else>Scott Evans</span>
 				</nuxt-link>
 
-				<nav class="navigation" role="navigation">
+				<nav class="navigation">
 					<transition name="fade" mode="out-in">
 						<ul class="pagination pagination-archive" v-if="postArchive" key="archive">
 							<li v-if="notFirstPage">
 								<nuxt-link :to="prevPage">
-									<span class="screen-reader-text">Older posts</span>
-									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="rightTitle" role="img">
-										<title id="rightTitle">Right arrow icon</title>
+									<span class="screen-reader-text">Newer posts</span>
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="leftTitle" role="img">
+										<title id="leftTitle">Left arrow icon</title>
 										<path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
 									</svg>
 								</nuxt-link>
@@ -28,9 +28,9 @@
 							<li v-else>&nbsp;</li>
 							<li v-if="notLastPage">
 								<nuxt-link :to="nextPage">
-									<span class="screen-reader-text">Newer posts</span>
-									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="leftTitle" role="img">
-										<title id="leftTitle">Left arrow icon</title>
+									<span class="screen-reader-text">Older posts</span>
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="rightTitle" role="img">
+										<title id="rightTitle">Right arrow icon</title>
 										<path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
 									</svg>
 								</nuxt-link>
