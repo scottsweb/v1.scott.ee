@@ -17,10 +17,19 @@ export default {
 	},
 	// get all posts
 	getPosts: (state) => {
-		return state.posts
+		// sort by date
+		const posts = [...state.posts].sort( (a,b) => {
+			return a.date < b.date
+		} )
+		return posts
 	},
 	// get page of posts
 	getPostsPage: (state) => (page) => {
-		return state.posts.filter(post => post.page === page)
+		// filter just the current page
+		const posts = state.posts.filter(post => post.page === page)
+		// sort by date
+		return posts.sort( (a,b) => {
+			return a.date < b.date
+		} )
 	},
 }

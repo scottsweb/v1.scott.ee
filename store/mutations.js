@@ -17,8 +17,6 @@ export default {
 				state.posts.push( post )
 			}
 		}
-		// TODO: do we need to sort by date (the API does that) - better to do this on get not set
-		//state.posts.sort((a,b) => a.date_gmt < b.date_gmt)
 	},
 	// paginate
 	paginate( state, page ) {
