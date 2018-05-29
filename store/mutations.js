@@ -1,34 +1,40 @@
 export default {
 	// add one the pages state
-	addPage(state, page) {
+	addPage( state, page ) {
 		// check the store for existing page before adding
-		if (undefined === this.getters.getPageBySlug(page.slug)) {
-			state.pages.push(page)
+		if ( undefined === this.getters.getPageBySlug( page.slug ) ) {
+			state.pages.push( page )
 		}
 	},
 	// add one or many posts to the posts state
-	addPosts(state, posts) {
-		for (let post of posts) {
-			state.posts.push(post)
+	addPosts( state, posts ) {
+		for ( let post of posts ) {
+			// either replace the existing item or push onto state array
+			const i = state.posts.findIndex( o => o.id === post.id )
+			if ( state.posts[i] ) {
+				state.posts[i] = post
+			} else {
+				state.posts.push( post )
+			}
 		}
 		// TODO: do we need to sort by date (the API does that) - better to do this on get not set
 		//state.posts.sort((a,b) => a.date_gmt < b.date_gmt)
 	},
 	// paginate
-	paginate(state, page) {
-		state.pagination.pages.push(page)
+	paginate( state, page ) {
+		state.pagination.pages.push( page )
 	},
 	// current page
-	currentPage(state, page) {
+	currentPage( state, page ) {
 		state.pagination.current = page
 	},
 	// pagination totals from API
-	paginateTotals(state, totals) {
+	paginateTotals( state, totals ) {
 		state.pagination.totalPosts = totals.totalPosts
 		state.pagination.totalPostsPages = totals.totalPostsPages
 	},
 	// enable / disable pagination
-	paginateToggle(state, onoff) {
+	paginateToggle( state, onoff ) {
 		state.pagination.paginate = onoff
 	}
 }
