@@ -3,7 +3,11 @@
 
 .content {
 	margin-top: $margins * 6;
-	margin-bottom: $margins * 4;
+	margin-bottom: $margins * 2;
+
+	@include large-breakpoint {
+		margin-bottom: $margins * 4;
+	}
 }
 
 .posts {
@@ -24,7 +28,7 @@
 	}
 
 	.post {
-		padding-bottom: $margins;
+		padding-bottom: $margins ;
 		margin-bottom: $margins;
 		border-bottom: 1px solid $accent-color;
 
@@ -188,7 +192,7 @@ img {
 
 .footer {
 	text-align: center;
-	margin-bottom: $margins * 3;
+	margin-bottom: $margins * 2;
 
 	@include large-breakpoint {
 		margin-bottom: $margins * 4;
