@@ -48,7 +48,7 @@ module.exports = {
 	* Axios / API
 	*/
 	axios: {
-		baseURL: 'https://scott.ee/wp-json/wp/v2/',
+		baseURL: 'https://api.scott.ee/wp-json/wp/v2/',
 		https: true,
 		progress: true
 	},
