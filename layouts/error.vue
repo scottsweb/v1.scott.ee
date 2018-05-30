@@ -15,7 +15,10 @@ export default {
 	props: ['error'],
 	head() {
 		return {
-			title: this.message
+			title: this.message,
+			bodyAttrs: {
+				class: 'error-page'
+			},
 		}
 	},
 	// Only on debug mode
@@ -51,7 +54,6 @@ export default {
 <style>
 .__nuxt-error-page {
   padding: 1rem;
-  color: #47494E;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -72,21 +74,10 @@ export default {
 .__nuxt-error-page .title {
   font-size: 1.5rem;
   margin-top: 15px;
-  color: #47494E;
   margin-bottom: 8px;
 }
 .__nuxt-error-page .description {
-  color: #7F828B;
   line-height: 21px;
   margin-bottom: 10px;
-}
-.__nuxt-error-page a {
-  color: #7F828B !important;
-  text-decoration: none;
-}
-.__nuxt-error-page .logo {
-  position: fixed;
-  left: 12px;
-  bottom: 12px;
 }
 </style>
