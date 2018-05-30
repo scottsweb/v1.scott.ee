@@ -6,14 +6,15 @@
   "private": true,
   "scripts": {
     "dev": "nuxt --spa",
-	"start": "nuxt start",
+    "start": "nuxt start",
     "spa": "nuxt build --spa",
-	"spa-no-generate": "nuxt build --spa --no-generate",
+    "spa-no-generate": "nuxt build --spa --no-generate",
     "generate": "nuxt generate",
     "generate-content": "nuxt generate --no-build",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "analyse": "yarn nuxt build --webpackmonitor --analyze",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "deploy-gh": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
@@ -41,6 +42,7 @@
     "node-persist": "^3.0.0",
     "node-sass": "^4.8.3",
     "postcss-loader": "^2.1.3",
+    "push-dir": "^0.4.1",
     "sass-loader": "^6.0.7"
   }
 }
