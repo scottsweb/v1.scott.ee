@@ -17,6 +17,7 @@
 	width: 100%;
 	z-index: 10;
 	height: 55px;
+	overflow: hidden;
 
 	@include xlarge-breakpoint {
 		width: 150px;
