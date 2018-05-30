@@ -14,7 +14,7 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "analyse": "yarn nuxt build --webpackmonitor --analyze",
     "precommit": "npm run lint",
-    "deploy-gh": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "deploy-gh": "push-dir --dir=dist --branch=gh-pages --cleanup --allow-unclean"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
