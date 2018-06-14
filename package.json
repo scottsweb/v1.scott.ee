@@ -24,7 +24,7 @@
     "date-fns": "^1.29.0",
     "install": "^0.11.0",
     "npm": "^6.1.0",
-    "nuxt": "^1.4.0",
+    "nuxt": "^1.4.1",
     "velocity-animate": "^1.5.1",
     "vue-lazyload": "^1.2.5",
     "vue-scrollto": "^2.11.0",
