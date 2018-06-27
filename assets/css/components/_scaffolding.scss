@@ -136,6 +136,7 @@ h5 {
 a {
 	color: $link-color;
 	text-decoration: underline;
+	transition: color 0.3s;
 
 	&:hover,
 	&:active,
