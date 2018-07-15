@@ -6,7 +6,7 @@
 			<li><a href="https://profiles.wordpress.org/scottsweb">WP</a></li>
 			<li><a href="https://twitter.com/scottsweb">Twitter</a></li>
 			<li><a href="https://github.com/scottsweb">GitHub</a></li>
-			<li><a href="https://scott.ee/feed/">RSS</a></li>
+			<li><a href="https://api.scott.ee/feed/">RSS</a></li>
 			<li><!--Inital load in {{ generated }} seconds--></li>
 		</ul>
 		<no-ssr>
