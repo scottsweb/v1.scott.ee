@@ -16,3 +16,7 @@ netlifyctl deploy -b dist/
 # deploy to GitHub
 # 185.199.109.153
 npm run deploy-gh
+
+# sync to dat
+# do this from dat folder
+dat sync
