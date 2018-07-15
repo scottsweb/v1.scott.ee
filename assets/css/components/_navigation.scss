@@ -36,6 +36,7 @@
 		height: 30px;
 		width: 100px;
 		margin: 13px 15px;
+		transition: all 0.3s;
 	}
 
 	&:hover {
@@ -90,6 +91,7 @@
 		background: $primary-color;
 		text-decoration: none;
 		text-align: center;
+		transition: all 0.3s;
 
 		@include xlarge-breakpoint {
 			padding: 16px 24px 5px 24px;
@@ -97,10 +99,10 @@
 
 		svg {
 			fill: $alternate-color;
+			transition: all 0.3s;
 		}
 
-		&:hover,
-		&:focus {
+		&:hover {
 			background: darken($primary-color, 5%);
 
 			svg {
