@@ -27,7 +27,7 @@
     "nuxt": "^1.4.1",
     "velocity-animate": "^1.5.2",
     "vue-lazyload": "^1.2.6",
-    "vue-scrollto": "^2.11.0",
+    "vue-scrollto": "^2.13.0",
     "vue-shortcuts": "^1.1.2"
   },
   "devDependencies": {
