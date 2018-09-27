@@ -43,6 +43,6 @@
     "node-sass": "^4.9.3",
     "postcss-loader": "^2.1.5",
     "push-dir": "^0.4.1",
-    "sass-loader": "^7.0.3"
+    "sass-loader": "^7.1.0"
   }
 }
