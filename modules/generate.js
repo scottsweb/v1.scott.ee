@@ -1,8 +1,9 @@
-const Axios = require( 'axios' )
-const Cache = require( 'node-persist' );
-const cache = Cache.create( { dir: '/tmp/', ttl: 300000 } );
-const fs = require( 'fs' )
-const ef = require( 'empty-folder' )
+import Axios from 'axios'
+import Cache from 'node-persist'
+import fs from 'fs'
+import ef from 'empty-folder'
+
+const cache = Cache.create( { dir: '/tmp/', ttl: 300000 } )
 const debug = require( 'debug' )( 'nuxt:generate' )
 
 module.exports = function () {

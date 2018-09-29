@@ -1,5 +1,5 @@
 import Vue from 'vue'
-const format = require( 'date-fns/format' )
+import { format } from 'date-fns'
 
 Vue.mixin( {
 	methods: {

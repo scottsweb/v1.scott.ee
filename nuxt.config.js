@@ -1,7 +1,8 @@
-const sleep = require( 'util' ).promisify( setTimeout )
-const Cache = require( 'node-persist' );
-const cache = Cache.create( { dir: '/tmp/', ttl: 300000 } );
+import Cache from 'node-persist'
+
+const cache = Cache.create( { dir: '/tmp/', ttl: 300000 } )
 const debug = require( 'debug' )( 'nuxt:generate' )
+const sleep = require( 'util' ).promisify( setTimeout )
 
 module.exports = {
 	/*
@@ -76,21 +77,13 @@ module.exports = {
 				} )
 	  		}
 		},
-		/*
-		* Packages to split from main bundle
-		*/
-		vendor: [
-			'axios',
-			'velocity-animate',
-			'vue-shortcuts'
-		],
 		extractCSS: true,
 	},
 	/*
 	* Render configuration (for SSR)
 	*/
 	render: {
-		gzip: {
+		compressor: {
 			threshold: 9
 		},
 		static: {
