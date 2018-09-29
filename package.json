@@ -22,7 +22,7 @@
     "@nuxtjs/sitemap": "0.1.1",
     "@nuxtjs/webpackmonitor": "^0.1.0",
     "date-fns": "^1.29.0",
-    "install": "^0.11.0",
+    "install": "^0.12.1",
     "npm": "^6.4.1",
     "nuxt": "^2.0.0",
     "velocity-animate": "^1.5.2",
