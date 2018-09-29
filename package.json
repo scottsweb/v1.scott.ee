@@ -35,7 +35,7 @@
     "empty-folder": "^2.0.2",
     "eslint": "^4.19.1",
     "eslint-friendly-formatter": "^4.0.1",
-    "eslint-loader": "^2.0.0",
+    "eslint-loader": "^2.1.0",
     "eslint-plugin-vue": "^4.5.0",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
