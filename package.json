@@ -33,7 +33,7 @@
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "empty-folder": "^2.0.2",
-    "eslint": "^5.6.1",
+    "eslint": "^5.7.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-vue": "^4.7.1",
