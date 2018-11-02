@@ -17,7 +17,7 @@
     "deploy-gh": "push-dir --dir=dist --branch=gh-pages --cleanup --allow-unclean"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.3.3",
+    "@nuxtjs/axios": "^5.3.4",
     "@nuxtjs/pwa": "^2.6.0",
     "@nuxtjs/sitemap": "0.1.1",
     "@nuxtjs/webpackmonitor": "^0.1.0",
