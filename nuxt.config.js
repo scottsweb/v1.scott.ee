@@ -78,6 +78,19 @@ module.exports = {
 	  		}
 		},
 		extractCSS: true,
+		html: {
+			minify: {
+				collapseBooleanAttributes: true,
+				decodeEntities: true,
+				minifyCSS: true,
+				minifyJS: true,
+				processConditionalComments: true,
+				removeEmptyAttributes: true,
+				removeRedundantAttributes: true,
+				trimCustomFragments: true,
+				useShortDoctype: true
+			},
+		},
 	},
 	/*
 	* Render configuration (for SSR)
@@ -98,14 +111,6 @@ module.exports = {
 		dir: 'dist',
 		interval: 0,
 		fallback: true,
-		minify: {
-			collapseWhitespace: true,
-			removeAttributeQuotes: false,
-			removeComments: false,
-			//removeTagWhitespace: true,
-			sortAttributes: true,
-			sortClassName: true,
-		},
 		apiCacheDir: 'static/json/',
 		async routes() {
 			debug( 'Generating application routes' )
