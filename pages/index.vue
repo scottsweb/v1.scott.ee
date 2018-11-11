@@ -6,7 +6,7 @@
 		<transition-group
 			name="list"
 			tag="div"
-			v-if="posts && posts.length"
+			v-show="posts && posts.length"
 			v-bind:css="false"
 			v-on:before-enter="beforeEnter"
 			v-on:enter="enter"
