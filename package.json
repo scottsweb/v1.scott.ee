@@ -17,13 +17,13 @@
     "deploy-gh": "push-dir --dir=dist --branch=gh-pages --cleanup --allow-unclean"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.3.3",
+    "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^2.6.0",
     "@nuxtjs/sitemap": "0.1.1",
     "@nuxtjs/webpackmonitor": "^0.1.0",
     "date-fns": "^1.29.0",
     "npm": "^6.4.1",
-    "nuxt": "^2.1.0",
+    "nuxt": "^2.2.0",
     "velocity-animate": "^1.5.2",
     "vue-lazyload": "^1.2.6",
     "vue-scrollto": "^2.13.0",
@@ -33,14 +33,14 @@
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "empty-folder": "^2.0.2",
-    "eslint": "^5.6.1",
+    "eslint": "^5.8.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-vue": "^4.7.1",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "node-persist": "^3.0.1",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.10.0",
     "postcss-loader": "^3.0.0",
     "push-dir": "^0.4.1",
     "sass-loader": "^7.1.0"
