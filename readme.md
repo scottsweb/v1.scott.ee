@@ -1,3 +1,5 @@
+![scott.ee](https://scott.ee/images/scott.png)
+
 # scott.ee
 
 * Status: ✅ Active
