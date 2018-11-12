@@ -103,11 +103,11 @@ add_filter( 'template_redirect', 'add_redirects' );
 I am also experimenting with changing the URLs within the RSS feed to reduce redirects. The RSS feed is still currently being served from the WordPress side at [api.scott.ee/feed/](https://api.scott.ee/feed/).
 
 ```
-function pressable_home_url( $home ) {
+function fix_feed_home_url( $home ) {
 	if ( is_feed() ) {
 		return str_replace( 'api.', '', $home );
 	}
 	return $home;
 }
-add_filter( 'home_url', 'pressable_home_url' );
+add_filter( 'home_url', 'fix_feed_home_url' );
 ```
