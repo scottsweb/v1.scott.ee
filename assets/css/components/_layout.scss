@@ -217,3 +217,9 @@ img {
 		display: none;
 	}
 }
+
+// no JS images
+
+#__nuxt[data-server-rendered="true"] .lazy img {
+	display: none;
+}
