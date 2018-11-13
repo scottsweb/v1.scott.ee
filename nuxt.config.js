@@ -1,4 +1,7 @@
 import Cache from 'node-persist'
+import PurgecssPlugin from 'purgecss-webpack-plugin'
+import glob from 'glob-all'
+import path from 'path'
 
 const cache = Cache.create( { dir: '/tmp/', ttl: 300000 } )
 const debug = require( 'debug' )( 'nuxt:generate' )
@@ -75,7 +78,29 @@ module.exports = {
 					loader: 'eslint-loader',
 					exclude: /(node_modules)/
 				} )
-	  		}
+			}
+			if ( ! isDev ) {
+				// Remove unused CSS using purgecss. See https://github.com/FullHuman/purgecss
+				// for more information about purgecss.
+				config.plugins.push(
+					new PurgecssPlugin( {
+						paths: glob.sync( [
+							path.join(__dirname, './pages/**/*.vue'),
+							path.join(__dirname, './layouts/**/*.vue'),
+							path.join(__dirname, './components/**/*.vue')
+						] ),
+						whitelist: ['html', 'body'],
+						whitelistPatterns: [
+							/-enter-active$/,
+							/-leave-active$/,
+							/-enter$/,
+							/-leave-to$/,
+							/lazy$/,
+							/wp-caption-text$/
+						]
+					} )
+				)
+			}
 		},
 		extractCSS: true,
 		html: {
