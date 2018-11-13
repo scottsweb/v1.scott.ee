@@ -137,6 +137,7 @@
 
 	img {
 		backface-visibility: hidden;
+		//will-change: transform;
 		height: auto;
 		transition: opacity 0.5s;
 		width: 100%;
