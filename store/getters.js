@@ -18,8 +18,8 @@ export default {
 	// get all posts
 	getPosts: (state) => {
 		// sort by date
-		const posts = [...state.posts].sort( (a,b) => {
-			return a.date < b.date
+		const posts = state.posts.sort( (a,b) => {
+			return a.date < b.date ? 1 : -1
 		} )
 		return posts
 	},
@@ -29,7 +29,7 @@ export default {
 		const posts = state.posts.filter(post => post.page === page)
 		// sort by date
 		return posts.sort( (a,b) => {
-			return a.date < b.date
+			return a.date < b.date ? 1 : -1
 		} )
 	},
 }
