@@ -124,7 +124,6 @@ module.exports = {
 	plugins: [
 		{ src: '~plugins/lazyload', ssr: false },
 		// { src: '~plugins/vue-scrollto', ssr: false },
-		{ src: '~/plugins/velocity', ssr: false },
 		{ src: '~/plugins/axios' },
 		{ src: '~/plugins/keyboard', ssr: false },
 		{ src: '~/plugins/mixins' },
