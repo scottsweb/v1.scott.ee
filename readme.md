@@ -113,3 +113,14 @@ function fix_feed_home_url( $home ) {
 }
 add_filter( 'home_url', 'fix_feed_home_url' );
 ```
+
+## Further Reading
+
+* https://github.com/nuxt-community/awesome-nuxt/
+* https://github.com/nuxt/todomvc
+* https://github.com/nuxt/hackernews
+* https://vuejsdevelopers.com/2017/04/22/vue-js-libraries-plugins/
+* https://github.com/nuxt-community/nuxt-generate-cluster
+* https://medium.com/vue-mastery/best-practices-for-nuxt-js-seo-32399c49b2e5
+* https://medium.com/wdstack/vue-vuex-getting-started-f78c03d9f65
+* https://medium.com/ax2-inc/use-nuxts-build-templates-property-to-contextually-generate-files-587761251f78
