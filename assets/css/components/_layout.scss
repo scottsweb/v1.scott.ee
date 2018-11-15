@@ -120,7 +120,11 @@
 
 .fade-enter-active, .fade-leave-active {
 	transition: all 0.4s;
-	//transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.single .fade-enter-active {
+	transition-delay: 0.4s;
 }
 
 .fade-enter {
