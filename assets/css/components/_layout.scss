@@ -229,3 +229,14 @@ img {
 #__nuxt[data-server-rendered="true"] .lazy img {
 	display: none;
 }
+
+// duetone
+
+#duetone-svg {
+	width: 0;
+	height: 0;
+	left: -99999em;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}
