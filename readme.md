@@ -72,7 +72,9 @@ function add_lazyload( $content ) {
 		if ( is_array( $matches ) && ! empty( $matches ) ) {
 			$wrapper->setAttribute( 'data-width', $matches[1] );
 			$wrapper->setAttribute( 'data-height', $matches[2] );
-			$wrapper->setAttribute( 'data-ratio', round( ( $matches[2] / $matches[1] ) * 100, 2 ) );
+			$wrapper->setAttribute( 'style', '--ratio:' . round( ( $matches[2] / $matches[1] ) * 100, 2 ) . '%;' );
+		} else {
+			$wrapper->setAttribute( 'style', '--ratio: 50%;' );
 		}
 
 		$oldsrcset = $node->getAttribute( 'srcset' );
