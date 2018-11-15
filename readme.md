@@ -66,7 +66,7 @@ function add_lazyload( $content ) {
 		$node->setAttribute( 'data-src', $oldsrc );
 		$node->setAttribute( 'src', '' );
 
-		// extract dimensions from source and add an aspect ratio
+		// extract dimensions from src and calculate an aspect ratio
 		$regex = '/resize=([0-9]*)%2C([0-9]*)/m';
 		preg_match( $regex, $oldsrc, $matches );
 		if ( is_array( $matches ) && ! empty( $matches ) ) {
