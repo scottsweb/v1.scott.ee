@@ -66,6 +66,15 @@ function add_lazyload( $content ) {
 		$node->setAttribute( 'data-src', $oldsrc );
 		$node->setAttribute( 'src', '' );
 
+		// extract dimensions from source and add an aspect ratio
+		$regex = '/resize=([0-9]*)%2C([0-9]*)/m';
+		preg_match( $regex, $oldsrc, $matches );
+		if ( is_array( $matches ) && ! empty( $matches ) ) {
+			$wrapper->setAttribute( 'data-width', $matches[1] );
+			$wrapper->setAttribute( 'data-height', $matches[2] );
+			$wrapper->setAttribute( 'data-ratio', round( ( $matches[2] / $matches[1] ) * 100, 2 ) );
+		}
+
 		$oldsrcset = $node->getAttribute( 'srcset' );
 		$node->setAttribute( 'data-srcset', $oldsrcset );
 		$node->setAttribute( 'srcset', '' );
