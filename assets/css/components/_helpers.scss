@@ -161,6 +161,10 @@
 	img[lazy=loaded] {
 		opacity: 1;
 		filter: url('#duotone');
+
+		&:hover {
+			filter: none;
+		}
 	}
 }
 
