@@ -2,9 +2,6 @@
 # generate the app - switch to content only
 npm run generate
 
-# remove node modules from build  (needs investigating)
-rm -rf dist/node_modules/
-
 # copy dist into dat archive
 # dat sync will be running and pick up changes
 cp dist/. ../scott.ee.dat/ -r

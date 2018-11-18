@@ -120,7 +120,11 @@
 
 .fade-enter-active, .fade-leave-active {
 	transition: all 0.4s;
-	//transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.single .fade-enter-active {
+	transition-delay: 0.4s;
 }
 
 .fade-enter {
@@ -224,4 +228,15 @@ img {
 
 #__nuxt[data-server-rendered="true"] .lazy img {
 	display: none;
+}
+
+// duetone
+
+#duetone-svg {
+	width: 0;
+	height: 0;
+	left: -99999em;
+	margin: 0;
+	padding: 0;
+	position: absolute;
 }

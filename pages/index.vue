@@ -88,27 +88,37 @@ export default {
 	},
 	methods: {
 		beforeEnter: function( el ) {
-			el.style.opacity = 0
+			if ( 'animate' in el ) {
+				el.style.opacity = 0
+			}
 		},
 		enter: function( el, done ) {
-			var delay = el.dataset.index * 150
-			setTimeout( () => {
-				this.$velocity(
-					el,
-					{ opacity: 1 },
-					{ complete: done }
-				)
-			}, delay )
+			if ( 'animate' in el ) {
+				var delay = el.dataset.index * 150
+				setTimeout( () => {
+					el.animate( [
+						{ opacity: 0 },
+						{ opacity: 1 }
+					], {
+						duration: 400,
+						fill: 'forwards'
+					}, done )
+				}, delay )
+			}
 		},
 		leave: function( el, done ) {
-			var delay = el.dataset.index * 150
-			setTimeout( () => {
-				this.$velocity(
-					el,
-					{ opacity: 0 },
-					{ complete: done }
-				)
-			}, delay )
+			if ( 'animate' in el ) {
+				var delay = el.dataset.index * 150
+				setTimeout( () => {
+					el.animate( [
+						{ opacity: 1 },
+						{ opacity: 0 }
+					], {
+						duration: 400,
+						fill: 'forwards'
+					}, done )
+				}, delay )
+			}
 		}
 	},
 }

@@ -133,17 +133,24 @@
 .lazy {
 	margin: 0;
 	padding: 0;
-	//background: $accent-color;
+	background: $alternate-background;
+	width: 100%;
+	padding-bottom: var(--ratio);
+	position: relative;
+	height: 0;
+	overflow: hidden;
 
 	img {
 		backface-visibility: hidden;
 		//will-change: transform;
-		height: auto;
 		transition: opacity 0.5s;
 		width: 100%;
 		max-width: 100%;
 		display: block;
 		color: transparent;
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 
 	img[lazy=loading] {
@@ -153,7 +160,11 @@
 
 	img[lazy=loaded] {
 		opacity: 1;
-		color: inherit;
+		filter: url('#duotone');
+
+		&:hover {
+			filter: none;
+		}
 	}
 }
 

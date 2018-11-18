@@ -130,6 +130,7 @@ add_filter( 'home_url', 'fix_feed_home_url' );
 * https://github.com/nuxt-community/awesome-nuxt/
 * https://github.com/nuxt/todomvc
 * https://github.com/nuxt/hackernews
+* https://github.com/krestaino/nuepress
 * https://vuejsdevelopers.com/2017/04/22/vue-js-libraries-plugins/
 * https://github.com/nuxt-community/nuxt-generate-cluster
 * https://medium.com/vue-mastery/best-practices-for-nuxt-js-seo-32399c49b2e5
