@@ -1,0 +1,5 @@
+Sitemap: https://scott.ee/sitemap.xml
+User-agent: *
+Disallow: /.well-known/
+Disallow: /json/
+Disallow: /images/
