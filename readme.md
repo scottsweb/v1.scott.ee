@@ -66,6 +66,17 @@ function add_lazyload( $content ) {
 		$node->setAttribute( 'data-src', $oldsrc );
 		$node->setAttribute( 'src', '' );
 
+		// extract dimensions from src and calculate an aspect ratio
+		$regex = '/resize=([0-9]*)%2C([0-9]*)/m';
+		preg_match( $regex, $oldsrc, $matches );
+		if ( is_array( $matches ) && ! empty( $matches ) ) {
+			$wrapper->setAttribute( 'data-width', $matches[1] );
+			$wrapper->setAttribute( 'data-height', $matches[2] );
+			$wrapper->setAttribute( 'style', '--ratio:' . round( ( $matches[2] / $matches[1] ) * 100, 2 ) . '%;' );
+		} else {
+			$wrapper->setAttribute( 'style', '--ratio: 50%;' );
+		}
+
 		$oldsrcset = $node->getAttribute( 'srcset' );
 		$node->setAttribute( 'data-srcset', $oldsrcset );
 		$node->setAttribute( 'srcset', '' );
@@ -125,3 +136,4 @@ add_filter( 'home_url', 'fix_feed_home_url' );
 * https://medium.com/vue-mastery/best-practices-for-nuxt-js-seo-32399c49b2e5
 * https://medium.com/wdstack/vue-vuex-getting-started-f78c03d9f65
 * https://medium.com/ax2-inc/use-nuxts-build-templates-property-to-contextually-generate-files-587761251f78
+* https://css-tricks.com/simple-server-side-rendering-routing-page-transitions-nuxt-js/
