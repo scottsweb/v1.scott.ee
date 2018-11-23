@@ -120,11 +120,7 @@
 
 .fade-enter-active, .fade-leave-active {
 	transition: all 0.4s;
-	transition-delay: 0.2s;
-}
-
-.single .fade-enter-active {
-	transition-delay: 0.4s;
+	transition-delay: 0.1s;
 }
 
 .fade-enter {
@@ -138,9 +134,9 @@
 }
 
 .popin-enter-active, .popin-leave-active {
-	transition: all 0.3s;
+	transition: all 0.4s;
 	will-change: transform;
-	//transition-delay: 0.2s;
+	transition-delay: 0.1s;
 }
 
 .popin-enter {
