@@ -27,7 +27,7 @@
     "vue-lazyload": "^1.2.6",
     "vue-scrollto": "^2.13.0",
     "vue-shortcuts": "^1.1.2",
-    "vue": "2.5.17"
+    "vue": "2.5.19"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
