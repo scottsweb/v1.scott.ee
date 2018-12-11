@@ -22,7 +22,7 @@
     "@nuxtjs/sitemap": "0.1.1",
     "@nuxtjs/webpackmonitor": "^0.1.0",
     "date-fns": "^1.29.0",
-    "npm": "^6.4.1",
+    "npm": "^6.5.0",
     "nuxt": "^2.3.4",
     "vue-lazyload": "^1.2.6",
     "vue-scrollto": "^2.13.0",
