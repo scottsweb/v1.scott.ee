@@ -25,7 +25,7 @@
     "npm": "^6.9.0",
     "nuxt": "^2.4.5",
     "vue-lazyload": "^1.2.6",
-    "vue-scrollto": "^2.14.0",
+    "vue-scrollto": "^2.15.0",
     "vue-shortcuts": "^1.1.2"
   },
   "devDependencies": {
