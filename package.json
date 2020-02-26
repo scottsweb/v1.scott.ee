@@ -29,7 +29,7 @@
     "vue-shortcuts": "^1.1.2"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.2",
+    "babel-eslint": "^10.1.0",
     "empty-folder": "^2.0.3",
     "eslint": "^5.16.0",
     "eslint-friendly-formatter": "^4.0.1",
