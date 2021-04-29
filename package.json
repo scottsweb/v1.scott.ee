@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.5.4",
-    "@nuxtjs/pwa": "^2.6.0",
+    "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/sitemap": "0.2.2",
     "@nuxtjs/webpackmonitor": "^0.1.0",
     "date-fns": "^1.30.1",
