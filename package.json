@@ -38,7 +38,7 @@
     "less": "^3.10.2",
     "less-loader": "^5.0.0",
     "node-persist": "^3.0.5",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "postcss-loader": "^3.0.0",
     "push-dir": "^0.4.1",
     "sass-loader": "^7.3.1"
