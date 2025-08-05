@@ -1,4 +1,4 @@
-![scott.ee](https://scott.ee/assets/img/scott.png)
+![scott.ee](https://scott.ee/images/scott.png)
 
 # scott.ee
 
